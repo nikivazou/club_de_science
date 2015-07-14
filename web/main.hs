@@ -13,13 +13,6 @@ copyDir = do route   idRoute
 main :: IO ()
 main = hakyll $ do
     match "static/*"     copyDir 
-    --match "static/pa1/*" copyDir
-    --match "static/pa2/*" copyDir
-    --match "static/pa3/*" copyDir
-    --match "static/pa4/*" copyDir
-    --match "static/pa5/*" copyDir
-    --match "static/pa6/*" copyDir
-    --match "static/pa7/*" copyDir
     
     match "css/*" $ do
         route   idRoute
@@ -31,7 +24,6 @@ main = hakyll $ do
     match "*.markdown"  $ myMakeHTML
 
 tops = [ "index.markdown"
-       , "grades.markdown"
        , "lectures.markdown"
        , "links.markdown"
        , "assignments.markdown"]
