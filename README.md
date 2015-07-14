@@ -11,8 +11,8 @@ To deplay
 - compile and update
 `make && make update`
 
-To edit from pages
-------------------
+To edit front pages
+-------------------
 Update the `.markdow` files
 
 To add a lecture
