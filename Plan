@@ -1,0 +1,27 @@
+Random Notes
+------------
+- Since some students are not familiar with programming we need to say what is a compiler etc
+
+
+The theory of Haskell
+---------------------
+- Lambda Calculus 
+- Type Checking 
+- Monads 
+- 
+
+Haskell features
+----------------
+- Syntax/Intro ()
+
+- Data Structures (lists and trees)
+   - sorting
+   - insert, delete 
+   
+- recursion (fib, hanoi)
+
+- higher order functions (map, fold)
+
+- Type Classes
+
+- Monads 
