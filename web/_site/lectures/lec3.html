@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Haskell @ Club De Science - lec3</title>
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+        <link rel="stylesheet" type="text/css" href="../css/syntax.css" />
+    </head>
+    <body>
+      <h1>Haskell @ Club De Science  - lec3 </h1>
+        <div id="navigation">
+        <a href="../index.html">Home</a>
+		<a href="../lectures.html">Lectures</a>
+	    <a href="../links.html">Links</a>
+        </div>
+	<br />
+	<br />
+	<h2 id="into-monads">Into Monads</h2>
+<div class="sourceCode"><pre class="sourceCode literate literatehaskell"><code class="sourceCode literatehaskell"><span class="ot">&gt;</span> <span class="kw">module</span> <span class="dt">Monads</span> <span class="kw">where</span></code></pre></div>
+<h2 id="division---nothing-example">Division - Nothing example</h2>
+<p>A simple evaluator</p>
+<div class="sourceCode"><pre class="sourceCode literate literatehaskell"><code class="sourceCode literatehaskell"><span class="ot">&gt;</span> <span class="kw">data</span> <span class="dt">Expr</span> <span class="fu">=</span> <span class="dt">Val</span> <span class="dt">Int</span> <span class="fu">|</span> <span class="dt">Div</span> <span class="dt">Expr</span> <span class="dt">Expr</span>
+<span class="ot">&gt;</span> 
+<span class="ot">&gt; eval1 ::</span> <span class="dt">Expr</span> <span class="ot">-&gt;</span> <span class="dt">Int</span>
+<span class="ot">&gt;</span> eval1 (<span class="dt">Val</span> n)     <span class="fu">=</span> n
+<span class="ot">&gt;</span> eval1 (<span class="dt">Div</span> e1 e2) <span class="fu">=</span> eval1 e1 <span class="ot">`div`</span> eval1 e2</code></pre></div>
+
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="fu">&gt;</span> eval1 (<span class="dt">Div</span> (<span class="dt">Val</span> <span class="dv">5</span>) (<span class="dt">Val</span> <span class="dv">0</span>))
+<span class="fu">***</span> <span class="dt">Exception</span><span class="fu">:</span> divide by zero</code></pre></div>
+    </body>
+
+    <div id="footer"> 
+      Site generated with <a href="http://jaspervdj.be/hakyll">hakyll</a>
+    </div> 
+</html>

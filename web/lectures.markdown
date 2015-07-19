@@ -2,16 +2,18 @@
 title: Lectures
 ---
 
-**Date**     **Topic**                                          **Notes**
---------     ----------------------------------------------     ------------------------
-   *8/3*     Lecture 1                                          [html][lec1] [lhs][lhs1] 
-   *8/4*     Lecture 2                                          [html][lec2] [lhs][lhs2] 
-   *8/5*     Lecture 3                                          [html][lec3] [lhs][lhs3] 
-   *8/6*     Lecture 4                                          [html][lec4] [lhs][lhs4] 
-   *8/7*     Lecture 5                                          [html][lec5] [lhs][lhs5] 
+**Topic**                                          **Notes**
+----------------------------------------------     ------------------------
+Intro                                              [intro]
+Our first functions                                [html][lec1] [lhs][lhs1] 
+Lecture 2                                          [html][lec2] [lhs][lhs2] 
+Lecture 3                                          [html][lec3] [lhs][lhs3] 
+Lecture 4                                          [html][lec4] [lhs][lhs4] 
+Lecture 5                                          [html][lec5] [lhs][lhs5] 
 
 ----------------------------------------------------------------------------------
 
+[intro]: intro.pdf
 [lec1]: lectures/lec1.html
 [lhs1]: lectures/lec1.lhs
 [lec2]: lectures/lec2.html

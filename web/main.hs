@@ -25,8 +25,7 @@ main = hakyll $ do
 
 tops = [ "index.markdown"
        , "lectures.markdown"
-       , "links.markdown"
-       , "assignments.markdown"]
+       , "links.markdown"]
 
 myMakeHTML 
   = do route   $ setExtension "html"

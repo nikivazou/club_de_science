@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Haskell @ Club De Science - lec1</title>
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+        <link rel="stylesheet" type="text/css" href="../css/syntax.css" />
+    </head>
+    <body>
+      <h1>Haskell @ Club De Science  - lec1 </h1>
+        <div id="navigation">
+        <a href="../index.html">Home</a>
+		<a href="../lectures.html">Lectures</a>
+	    <a href="../links.html">Links</a>
+        </div>
+	<br />
+	<br />
+	<div class="sourceCode"><pre class="sourceCode literate literatehaskell"><code class="sourceCode literatehaskell"><span class="ot">&gt;</span> <span class="kw">module</span> <span class="dt">Intro</span> <span class="kw">where</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode literate literatehaskell"><code class="sourceCode literatehaskell"><span class="ot">&gt;</span> fib <span class="dv">0</span> <span class="fu">=</span> <span class="dv">0</span> 
+<span class="ot">&gt;</span> fib <span class="dv">1</span> <span class="fu">=</span> <span class="dv">1</span>
+<span class="ot">&gt;</span> fib n <span class="fu">=</span> fib (n<span class="fu">-</span><span class="dv">1</span>) <span class="fu">+</span> fib (n<span class="fu">-</span><span class="dv">2</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode literate literatehaskell"><code class="sourceCode literatehaskell"><span class="ot">&gt; hanoi ::</span> <span class="dt">Integer</span> <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> [(a, a)]
+<span class="ot">&gt;</span> hanoi <span class="dv">0</span> _ _ _ <span class="fu">=</span> []
+<span class="ot">&gt;</span> hanoi n a b c <span class="fu">=</span> hanoi (n<span class="fu">-</span><span class="dv">1</span>) a c b <span class="fu">++</span> [(a,b)] <span class="fu">++</span> hanoi (n<span class="fu">-</span><span class="dv">1</span>) c b a</code></pre></div>
+    </body>
+
+    <div id="footer"> 
+      Site generated with <a href="http://jaspervdj.be/hakyll">hakyll</a>
+    </div> 
+</html>
