@@ -1,0 +1,24 @@
+Name:                SpamClassifier
+Version:             0.1.0
+Synopsis:            Probability distribution monads.
+Description:         Tools for random sampling, explicit enumeration of possible
+                     outcomes, and applying Bayes' rule.  Highly experimental,
+                     and subject to change.  In particular, the
+                     Data.Probability API is rather poor and could stand an
+                     overhaul.
+License-file:        LICENSE
+Category:            Control
+Author:              Niki Vazou <nvazou@cs.ucsd.edu>
+Maintainer:          Niki Vazou <nvazou@cs.ucsd.edu>
+Stability:           experimental
+Build-Depends:       base, mtl, MaybeT, MonadRandom, stemmer, directory
+Exposed-modules:     Data.Probability.Base,
+                     Data.Probability,
+                     Data.BST,
+                     Control.Monad.MonoidValue,
+                     Control.Monad.Distribution.Base,
+                     Control.Monad.Distribution
+ghc-options:         -Wall -fno-warn-orphans -O
+
+Executable:          classify
+Main-is:             Classify.hs

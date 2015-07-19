@@ -1,0 +1,59 @@
+This is an email classifier based on Martin Erwig's and Steve
+Kollmansberger's "Probabilistic Functional Programming"[1].
+
+
+
+Build
+-----
+Run `cabal install` 
+
+Classify 
+--------
+To train the classifier add mails in `Spam/hamEmails/` and `Spam/spamEmails`
+
+Put the content of your mail in `mail.txt` and run classify.
+
+
+
+
+
+
+
+
+
+
+
+This is a probability library inspired by Martin Erwig's and Steve
+Kollmansberger's "Probabilistic Functional Programming"[1], but with many
+additions and an underlying structure factored into monad transformers.
+
+You will need MaybeT and MonadRandom from HackageDB:
+
+  http://hackage.haskell.org/packages/archive/pkg-list.html
+
+...or from Darcs:
+
+  http://code.haskell.org/maybet/
+  http://code.haskell.org/monadrandom/
+
+To install, type:
+
+  runhaskell Setup.hs configure
+  runhaskell Setup.hs build
+  runhaskell Setup.hs install
+
+To build documentation, make sure Haddock is installed, and type:
+
+  runhaskell Setup.hs haddock
+
+This library is highly experimental, and the APIs may change without
+notice.
+
+The actual implementations of the probability monads currently appear in
+examples/Probability.hs.  These will eventually be moved into the main
+library.
+
+For further information, please see my blog[2].
+
+[1] http://web.engr.oregonstate.edu/~erwig/pfp/
+[2] http://www.randomhacks.net/articles/tag/Probability
