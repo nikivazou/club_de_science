@@ -18,9 +18,6 @@ eval1 (Val n)     = n
 eval1 (Div e1 e2) = eval1 e1 `div` eval1 e2
 \end{code}
 
-\begin{spec}
-eval1 (Div (Val 5) (Val 0))
-\end{spec}
 
 
 < > eval1 (Div (Val 5) (Val 0))
