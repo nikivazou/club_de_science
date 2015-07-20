@@ -6,8 +6,9 @@ title: Lectures
 ----------------------------------------------     ------------------------
 Intro                                              [intro]
 Our first functions                                [html][lec1] [lhs][lhs1] 
-Lecture 2                                          [html][lec2] [lhs][lhs2] 
-Lecture 3                                          [html][lec3] [lhs][lhs3] 
+Strings                                            [html][lec2] [lhs][lhs2] 
+Sorting Lists                                      [html][lec2] [lhs][lhs2] 
+Binary Search Trees                                [html][lec3] [lhs][lhs3] 
 Lecture 4                                          [html][lec4] [lhs][lhs4] 
 Lecture 5                                          [html][lec5] [lhs][lhs5] 
 
