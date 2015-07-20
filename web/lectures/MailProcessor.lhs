@@ -62,7 +62,7 @@ toLowerWord = undefined
 
 
 Normalization of a word normalizes URLS, emails, dollars, and numbers:
- 
+
 \begin{code}
 normalize :: String -> String
 normalize = normalizeURL . normalizeEmail . normalizeNumber . normalizeDollar
@@ -114,6 +114,7 @@ normalizeNumber  = undefined
 \end{code}
 
 - Stripping out HTML code
+
 \begin{code}
 stripHTML :: String -> Maybe String
 stripHTML x | isNonWord x = Nothing 
