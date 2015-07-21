@@ -7,10 +7,10 @@ title: Lectures
 Intro                                              [intro]
 Our first functions                                [html][lec1] [lhs][lhs1] 
 Playing with Strings (email processor)             [html][lec2] [lhs][lhs2] 
-Sorting Lists                                      [html][lec2] [lhs][lhs2] 
-Binary Search Trees                                [html][lec3] [lhs][lhs3] 
-Lecture 4                                          [html][lec4] [lhs][lhs4] 
-Lecture 5                                          [html][lec5] [lhs][lhs5] 
+Sorting Lists                                      [html][lec3] [lhs][lhs3] 
+Binary Search Trees                                [html][lec4] [lhs][lhs4] 
+Lecture 4                                          [html][lec5] [lhs][lhs5] 
+Lecture 5                                          [html][lec6] [lhs][lhs6] 
 
 ----------------------------------------------------------------------------------
 
@@ -19,9 +19,13 @@ Lecture 5                                          [html][lec5] [lhs][lhs5]
 [lhs1]: lectures/lec1.lhs
 [lec2]: lectures/MailProcessor.html
 [lhs2]: lectures/MailProcessor.lhs
-[lec3]: lectures/lec3.html
-[lhs3]: lectures/lec3.lhs
+[lec3]: lectures/Sorting.html
+[lhs3]: lectures/Sorting.lhs
+[lec6]: lectures/lec3.html
+[lhs6]: lectures/lec3.lhs
 [lec4]: lectures/lec4.html
 [lhs4]: lectures/lec4.lhs
 [lec5]: lectures/lec5.html
 [lhs5]: lectures/lec5.lhs
+[lec6]: lectures/lec3.html
+[lhs6]: lectures/lec3.lhs
