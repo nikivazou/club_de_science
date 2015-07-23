@@ -9,8 +9,10 @@ Our first functions                                [html][lec1] [lhs][lhs1]
 Playing with Strings (email processor)             [html][lec2] [lhs][lhs2] 
 Sorting Lists                                      [html][lec3] [lhs][lhs3] 
 Binary Search Trees                                [html][lec4] [lhs][lhs4] 
-Lecture 4                                          [html][lec5] [lhs][lhs5] 
-Lecture 5                                          [html][lec6] [lhs][lhs6] 
+Monads                                             [html][lec5] [lhs][lhs5] 
+The probability Monad                              [html][lec6] [lhs][lhs6] 
+The State Monad
+Monad Transformers                           
 
 ----------------------------------------------------------------------------------
 
@@ -21,10 +23,10 @@ Lecture 5                                          [html][lec6] [lhs][lhs6]
 [lhs2]: lectures/MailProcessor.lhs
 [lec3]: lectures/Sorting.html
 [lhs3]: lectures/Sorting.lhs
+[lec4]: lectures/BST.html
+[lhs4]: lectures/BST.lhs
 [lec6]: lectures/lec3.html
 [lhs6]: lectures/lec3.lhs
-[lec4]: lectures/lec4.html
-[lhs4]: lectures/lec4.lhs
 [lec5]: lectures/lec5.html
 [lhs5]: lectures/lec5.lhs
 [lec6]: lectures/lec3.html
