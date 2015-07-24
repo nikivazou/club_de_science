@@ -294,6 +294,9 @@ rotateL k x l r@(Bin _ _ _ ly ry)
   | otherwise               = doubleL k x l r
 rotateL _ _ _ Tip = error "rotateL Tip"
 
+
+
+
 rotateR :: a -> b -> Map a b -> Map a b -> Map a b
 rotateR k x l@(Bin _ _ _ ly ry) r
   | size ry < ratio*size ly = singleR k x l r
