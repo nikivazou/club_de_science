@@ -11,14 +11,14 @@ Sorting Lists                                      [html][lec3] [lhs][lhs3]
 Binary Search Trees                                [html][lec4] [lhs][lhs4] 
 Monads                                             [html][lec5] [lhs][lhs5] 
 State Monad                                        [html][lec6] [lhs][lhs6] 
-Email Normalization                                [html][lec7] [lhs][lhs7] 
+Counting Words                                     [html][lec7] [lhs][lhs7] 
 Monad Transformers                                 [html][lec8] [lhs][lhs8]
 
 ----------------------------------------------------------------------------------
 
 [intro]: intro.pdf
-[lec1]: lectures/lec1.html
-[lhs1]: lectures/lec1.lhs
+[lec1]: lectures/Functions.html
+[lhs1]: lectures/Functions.lhs
 [lec2]: lectures/MailProcessor.html
 [lhs2]: lectures/MailProcessor.lhs
 [lec3]: lectures/Sorting.html
@@ -29,7 +29,7 @@ Monad Transformers                                 [html][lec8] [lhs][lhs8]
 [lhs5]: lectures/Monads.lhs
 [lec6]: lectures/StateMonad.html
 [lhs6]: lectures/StateMonad.lhs
-[lec7]: lectures/EmailNormalization.html
-[lhs7]: lectures/EmailNormalization.lhs
+[lec7]: lectures/WordCount.html
+[lhs7]: lectures/WordCount.lhs
 [lec8]: lectures/MonadTransformers.html
 [lhs8]: lectures/MonadTransformers.lhs

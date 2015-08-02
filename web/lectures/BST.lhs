@@ -6,6 +6,8 @@ A _binary search tree_ (BST) is a binary tree where each node has a Comparable k
 
 \begin{code}
 module BST (
+	Map,
+
 	-- Construction 
 	empty, singleton,
 
