@@ -143,7 +143,7 @@ the monadic instance.
 <  return x = Just x
 < 
 < -- (>>=) :: Maybe a ->  (a -> Maybe b) -> Maybe b
-<  Nothin  >>= _ = Nothing
+<  Nothing >>= _ = Nothing
 < (Just x) >>= f = f x
 
 
@@ -182,7 +182,6 @@ instance Monad Perhaps where
   (Perhaps x p) >>= f = undefined 
 \end{code}
 
-
 Now you can use `Perhaps` as a monad and the meaning of the semicolon is to 
 multiply probabilities!!!!!
 
@@ -205,12 +204,6 @@ Turns out you can have this feature! Coming soon!
 Before that, let's see how monads are used to fake effectful programming in Haskell!
 
 
-
-The State Monad
----------------
-
-The IO Monad
--------------
 
 Cheating!!!!!
 --------------
