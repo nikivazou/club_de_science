@@ -2,10 +2,10 @@ import Control.Applicative
 
 import GHC.Real
 
-import Data.Probability
-import Control.Monad.Distribution
+-- import Data.Probability
+-- import Control.Monad.Distribution
 
-import Control.Monad.MonoidValue
+-- import Control.Monad.MonoidValue
 
 -- import Spam.SpamClassifier 
 import Spam.PPrint 
@@ -16,13 +16,16 @@ import System.Directory (getDirectoryContents)
 
 import qualified Data.BST as BST
 
+import Data.List (foldl')
+
 main :: IO ()
 main = clasifyEmail mailPath
 
-boolDist :: Prob -> BDDist Bool
+-- boolDist :: Prob -> BDDist Bool
 boolDist p =
     weighted [(True, p'), (False, 1-p')]
   where p' = fromProb p
+
 
 
 entryFor :: Enum a => a -> [b] -> b
@@ -73,6 +76,11 @@ initmsgType =
   weighted (zipWith (,) [Spam,Ham] initCounts)
 
 
+
+
+-- uniform = weighted . map (\x -> (x, 1))
+
+
 -- | hasWord _ "free" prior
 -- | (Note prior has info on how ofter you get spam)
 -- | P(isSpam | w = "free") = P(w = "free" | isSpam) * P(isSpam) / normalization
@@ -105,3 +113,60 @@ hasWords wc (w:ws) prior = do
   hasWord wc  w (hasWords wc ws prior)
 
 
+
+
+
+---- Probs
+
+newtype Prob = P Float
+  deriving (Eq, Ord, Num)
+
+
+fromProb (P n) = n
+prob n = P n 
+
+instance Show Prob where
+  show (P p) = show intPart ++ "." ++ show fracPart ++ "%"
+    where digits = round (1000 * p)
+          intPart = digits `div` 10
+          fracPart = digits `mod` 10
+
+data Perhaps a = Perhaps a Prob
+  deriving (Show)
+
+
+neverHappens (Perhaps _ 0) = True
+neverHappens _             = False
+
+never = Perhaps undefined 0
+
+instance Functor Perhaps where
+  fmap f (Perhaps x p) = Perhaps (f x) p
+
+instance Monad Perhaps where
+  return x = Perhaps x 1
+  ph >>= f  | neverHappens ph  = never
+            | otherwise        = Perhaps x (p1 * p2)
+    where (Perhaps (Perhaps x p1) p2) = fmap f ph
+
+
+newtype PerhapsT m a = PerhapsT { runPerhapsT :: m (Perhaps a) }
+type Dist = PerhapsT ([])
+
+weighted :: [(a, Float)] -> Dist a
+weighted [] =
+  error "Empty probability distributuion"
+weighted xws = PerhapsT (map weight xws)
+  where weight (x,w) = Perhaps x (P (w / sum))
+        sum = foldl' (\w1 (_,w2) -> w1+w2) 0 xws
+
+
+
+
+type FDist' = MaybeT FDist
+guard :: Bool -> FDist' ()
+guard = MaybeT . return . toMaybe
+  where toMaybe True  = Just ()
+        toMaybe False = Nothing
+bayes :: FDist' a -> [Perhaps a]
+bayes = exact . onlyJust . runMaybeT
